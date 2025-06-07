@@ -1,0 +1,115 @@
+# Aprenda algoritmos com o Professor Marco Maddo
+
+## 🧠 Situação Problema: Análise de Candidatos a Vagas de Emprego
+
+### Versão 1 — Redação padrão
+Uma empresa deseja realizar um levantamento detalhado sobre os candidatos interessados em suas vagas. Para isso, será necessário desenvolver um programa que leia a idade, o sexo (`M` para masculino e `F` para feminino) e se a pessoa possui experiência prévia (`S` para sim, `N` para não). A entrada de dados termina quando a idade for zero.  
+O programa deverá calcular e exibir:
+
+- Total de candidatas mulheres;
+- Total de candidatos homens;
+- Idade média dos homens com experiência;
+- Porcentagem de homens com mais de 55 anos;
+- Número de mulheres com menos de 29 anos e com experiência;
+- Menor idade entre as mulheres com experiência.
+
+---
+
+## 💬 Portugol
+
+```portugol
+algoritmo "levantamento_candidatos"
+var
+  idade, totalMulheres, totalHomens, homensComExp, somaIdadeHomensExp, homens55: inteiro
+  mulheresExpMenor29, menorIdadeMulherExp: inteiro
+  sexo, experiencia: caractere
+  porcentagemHomens55, mediaIdadeHomensExp: real
+inicio
+  totalMulheres <- 0
+  totalHomens <- 0
+  homensComExp <- 0
+  somaIdadeHomensExp <- 0
+  homens55 <- 0
+  mulheresExpMenor29 <- 0
+  menorIdadeMulherExp <- 999
+
+  escreval("Digite os dados dos candidatos (idade 0 encerra):")
+
+  repita
+    escreva("Idade: ")
+    leia(idade)
+
+    se idade > 0 entao
+      escreva("Sexo (M/F): ")
+      leia(sexo)
+      escreva("Experiência (S/N): ")
+      leia(experiencia)
+
+      se sexo = "F" ou sexo = "f" entao
+        totalMulheres <- totalMulheres + 1
+
+        se experiencia = "S" ou experiencia = "s" entao
+          se idade < 29 entao
+            mulheresExpMenor29 <- mulheresExpMenor29 + 1
+          fimse
+          se idade < menorIdadeMulherExp entao
+            menorIdadeMulherExp <- idade
+          fimse
+        fimse
+
+      senao
+        totalHomens <- totalHomens + 1
+        se experiencia = "S" ou experiencia = "s" entao
+          homensComExp <- homensComExp + 1
+          somaIdadeHomensExp <- somaIdadeHomensExp + idade
+        fimse
+        se idade > 55 entao
+          homens55 <- homens55 + 1
+        fimse
+      fimse
+    fimse
+  ate idade = 0
+
+  escreval("Total de candidatas mulheres: ", totalMulheres)
+  escreval("Total de candidatos homens: ", totalHomens)
+
+  se homensComExp > 0 entao
+    mediaIdadeHomensExp <- somaIdadeHomensExp / homensComExp
+    escreval("Idade média dos homens com experiência: ", mediaIdadeHomensExp:0:2)
+  senao
+    escreval("Nenhum homem com experiência informado.")
+  fimse
+
+  se totalHomens > 0 entao
+    porcentagemHomens55 <- (homens55 * 100) / totalHomens
+    escreval("Porcentagem de homens com mais de 55 anos: ", porcentagemHomens55:0:2, "%")
+  senao
+    escreval("Nenhum homem informado.")
+  fimse
+
+  escreval("Número de mulheres com menos de 29 anos e com experiência: ", mulheresExpMenor29)
+
+  se menorIdadeMulherExp < 999 entao
+    escreval("Menor idade entre as mulheres com experiência: ", menorIdadeMulherExp)
+  senao
+    escreval("Nenhuma mulher com experiência informada.")
+  fimse
+fimalgoritmo
+```
+
+---
+
+## 🌐 Redes do Professor Marco Maddo
+
+- YouTube: [Professor Marco Maddo](https://www.youtube.com/@ProfessorMarcoMaddo)
+- LinkedIn: [Marco Maddo](https://www.linkedin.com/in/marcomaddo/)
+- GitHub: [@profmaddo](https://github.com/profmaddo)
+- GitLab: [@profmaddo](https://gitlab.com/profmaddo)
+- Udemy: [Cursos Marco Maddo](https://www.udemy.com/user/marcomaddo/)
+
+---
+
+## 🚀 Acesse também:
+
+- 🌐 Site oficial do professor: [www.marcomaddo.com.br](https://www.marcomaddo.com.br)
+- 🧑‍💼 Empresa TSSTI Tecnologia: [www.tssti.com.br](https://www.tssti.com.br)
