@@ -1,6 +1,6 @@
 # Guia de Instalação e Compilação de Programas C/C++
 
-Este guia explica como **compilar e executar** programas escritos em **C ou C++** utilizando o compilador `g++`, compatível com os principais sistemas operacionais: **Linux**, **macOS** e **Windows**.
+Este guia explica como **compilar e executar** programas escritos em **C ou C++** utilizando o compilador `gcc` ou `g++`, compatível com os principais sistemas operacionais: **Linux**, **macOS** e **Windows**.
 
 ---
 
@@ -22,26 +22,32 @@ sudo apt update
 sudo apt install g++
 ```
 
-### ⚙️ Compilar
+> Verifique a instalação:
+```bash
+g++ --version
+```
+
+### ⚙️ Compilar C++ (.cpp)
 
 ```bash
 g++ nome_do_arquivo.cpp -o nome_programa
 ```
 
-Exemplo:
+### ⚙️ Compilar C puro (.c)
+
 ```bash
-g++ estatisticas_numeros.cpp -o estatisticas_numeros
+gcc nome_do_arquivo.c -o nome_programa
 ```
 
 ### ▶️ Executar
 
 ```bash
-./estatisticas_numeros
+./nome_programa
 ```
 
 ---
 
-## 🍎 macOS (com Homebrew instalado)
+## 🍎 macOS (com Homebrew)
 
 ### ✅ Instalar o compilador
 
@@ -49,35 +55,37 @@ g++ estatisticas_numeros.cpp -o estatisticas_numeros
 brew install gcc
 ```
 
-> O executável pode se chamar `g++-13`, `g++-14`, etc.
-
-### ⚙️ Compilar
-
+> Verifique:
 ```bash
-g++ estatisticas_numeros.cpp -o estatisticas_numeros
+g++ --version
 ```
 
-Ou:
+### ⚙️ Compilar C++ (.cpp)
 
 ```bash
-g++-13 estatisticas_numeros.cpp -o estatisticas_numeros
+g++ nome_do_arquivo.cpp -o nome_programa
+```
+
+Se houver múltiplas versões, tente:
+```bash
+g++-13 nome_do_arquivo.cpp -o nome_programa
 ```
 
 ### ▶️ Executar
 
 ```bash
-./estatisticas_numeros
+./nome_programa
 ```
 
 ---
 
 ## 🪟 Windows
 
-### ✅ Opção 1: Usar o MSYS2
+### ✅ Opção 1: Usar MSYS2
 
 1. Baixe e instale o [MSYS2](https://www.msys2.org/)
 2. Abra o terminal `MSYS2 MinGW 64-bit`
-3. Instale o compilador:
+3. Execute:
 
 ```bash
 pacman -Syu
@@ -87,26 +95,72 @@ pacman -S mingw-w64-x86_64-gcc
 ### ⚙️ Compilar e Executar
 
 ```bash
-g++ estatisticas_numeros.cpp -o estatisticas_numeros.exe
-./estatisticas_numeros.exe
+g++ nome_do_arquivo.cpp -o nome_programa.exe
+./nome_programa.exe
 ```
 
 ---
 
-### ✅ Opção 2: Usar o Code::Blocks
+### ✅ Opção 2: Usar Code::Blocks com MinGW
 
-1. Baixe o instalador com MinGW incluso:
+1. Baixe o instalador completo:
    👉 [Download Code::Blocks com MinGW](http://www.codeblocks.org/downloads/26)
-2. Instale e abra o Code::Blocks
-3. Crie um novo projeto → Console Application → C++
-4. Copie o código para o `main.cpp`
-5. Pressione **F9** para compilar e executar
+2. Crie um novo projeto Console
+3. Cole seu código em `main.cpp`
+4. Pressione F9 para compilar e executar
+
+---
+
+## ⚠️ Erros comuns e como resolver
+
+### ❌ `fatal error: 'iostream' file not found`
+
+- Esse erro ocorre ao tentar compilar código C++ com `gcc`, que é para C.
+- Solução: use `g++` em vez de `gcc`.
+
+### ✅ Correto:
+
+```bash
+g++ estatisticas_numeros.cpp -o estatisticas_numeros
+```
+
+---
+
+### ❌ `no such file or directory: 'arquivo.cpp'`
+
+- O arquivo com esse nome **não existe no diretório atual**.
+
+### ✅ Solução:
+
+1. Use `ls` para listar arquivos:
+
+```bash
+ls *.cpp
+```
+
+2. Renomeie corretamente:
+
+```bash
+mv estatisticas_numeros.c estatisticas_numeros.cpp
+```
+
+---
+
+### ❌ `./estatisticas_numeros: No such file or directory`
+
+- Isso acontece se o programa **não foi compilado corretamente**.
+
+### ✅ Verifique:
+
+```bash
+g++ estatisticas_numeros.cpp -o estatisticas_numeros
+```
 
 ---
 
 ## ✅ Teste rápido
 
-Crie um arquivo chamado `teste.cpp` com o seguinte conteúdo:
+Crie um arquivo `teste.cpp` com:
 
 ```cpp
 #include <iostream>
@@ -118,7 +172,12 @@ int main() {
 }
 ```
 
-Compile e execute conforme as instruções acima.
+Compile e execute:
+
+```bash
+g++ teste.cpp -o teste
+./teste
+```
 
 ---
 
