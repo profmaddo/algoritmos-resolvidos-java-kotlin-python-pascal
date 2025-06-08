@@ -75,6 +75,176 @@ fimalgoritmo
 
 ---
 
+## 💙 Implementação em Kotlin
+
+```kotlin
+fun main() {
+    var codigo: Int
+    var sexo: String
+    var horas: Int
+    var bruto: Double
+    var liquido: Double
+    var somaMasculino = 0.0
+    var somaFeminino = 0.0
+    var contMasculino = 0
+    var contFeminino = 0
+
+    println("Digite os dados dos professores. Código 1212 encerra.")
+
+    do {
+        print("Código: ")
+        codigo = readln().toInt()
+
+        if (codigo != 1212) {
+            print("Sexo (M/F): ")
+            sexo = readln()
+            print("Horas/aula: ")
+            horas = readln().toInt()
+
+            bruto = horas * 50.0
+
+            if (sexo.equals("M", ignoreCase = true)) {
+                liquido = bruto * 0.88
+                somaMasculino += liquido
+                contMasculino++
+            } else {
+                liquido = bruto * 0.43
+                somaFeminino += liquido
+                contFeminino++
+            }
+
+            println("Código: $codigo")
+            println("Salário bruto: R$ %.2f".format(bruto))
+            println("Salário líquido: R$ %.2f".format(liquido))
+            println("-----------------------------")
+        }
+    } while (codigo != 1212)
+
+    if (contMasculino > 0)
+        println("Média salário líquido (Homens): R$ %.2f".format(somaMasculino / contMasculino))
+    if (contFeminino > 0)
+        println("Média salário líquido (Mulheres): R$ %.2f".format(somaFeminino / contFeminino))
+}
+
+
+```
+
+---
+
+## 🐍 Implementação em Python
+
+```python
+print("Digite os dados dos professores. Código 1212 encerra.")
+
+soma_masculino = 0
+soma_feminino = 0
+cont_masculino = 0
+cont_feminino = 0
+
+while True:
+    codigo = int(input("Código: "))
+    if codigo == 1212:
+        break
+
+    sexo = input("Sexo (M/F): ").strip().upper()
+    horas = int(input("Horas/aula: "))
+
+    bruto = horas * 50.0
+
+    if sexo == 'M':
+        liquido = bruto * 0.88
+        soma_masculino += liquido
+        cont_masculino += 1
+    else:
+        liquido = bruto * 0.43
+        soma_feminino += liquido
+        cont_feminino += 1
+
+    print(f"Código: {codigo}")
+    print(f"Salário bruto: R$ {bruto:.2f}")
+    print(f"Salário líquido: R$ {liquido:.2f}")
+    print("-----------------------------")
+
+if cont_masculino > 0:
+    print(f"Média salário líquido (Homens): R$ {soma_masculino / cont_masculino:.2f}")
+if cont_feminino > 0:
+    print(f"Média salário líquido (Mulheres): R$ {soma_feminino / cont_feminino:.2f}")
+
+
+```
+
+---
+
+## 🧙 Implementação em Pascal
+
+```pascal
+program SalarioProfessores;
+
+uses crt;
+
+var
+  codigo, horas: integer;
+  sexo: char;
+  bruto, liquido: real;
+  somaMasculino, somaFeminino: real;
+  contMasculino, contFeminino: integer;
+
+begin
+  clrscr;
+  somaMasculino := 0;
+  somaFeminino := 0;
+  contMasculino := 0;
+  contFeminino := 0;
+
+  writeln('Digite os dados dos professores. Código 1212 encerra.');
+
+  repeat
+    write('Código: ');
+    readln(codigo);
+
+    if codigo <> 1212 then
+    begin
+      write('Sexo (M/F): ');
+      readln(sexo);
+      sexo := upcase(sexo);
+
+      write('Horas/aula: ');
+      readln(horas);
+
+      bruto := horas * 50;
+
+      if sexo = 'M' then
+      begin
+        liquido := bruto * 0.88;
+        somaMasculino := somaMasculino + liquido;
+        contMasculino := contMasculino + 1;
+      end
+      else
+      begin
+        liquido := bruto * 0.43;
+        somaFeminino := somaFeminino + liquido;
+        contFeminino := contFeminino + 1;
+      end;
+
+      writeln('Código: ', codigo);
+      writeln('Salário bruto: R$ ', bruto:0:2);
+      writeln('Salário líquido: R$ ', liquido:0:2);
+      writeln('-----------------------------');
+    end;
+  until codigo = 1212;
+
+  if contMasculino > 0 then
+    writeln('Média salário líquido (Homens): R$ ', (somaMasculino / contMasculino):0:2);
+  if contFeminino > 0 then
+    writeln('Média salário líquido (Mulheres): R$ ', (somaFeminino / contFeminino):0:2);
+
+  readln;
+end.
+
+
+```
+
+---
 ## 🌐 Redes do Professor Marco Maddo
 
 - YouTube: [Professor Marco Maddo](https://www.youtube.com/@ProfessorMarcoMaddo)

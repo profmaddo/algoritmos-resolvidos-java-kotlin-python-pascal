@@ -94,6 +94,7 @@ java -version
 Use o compilador de linha de comando:
 
 ```bash
+brew install --cask kotlin-native # instalação com homebrews no macOS.
 sdk install kotlin       # se tiver SDKMAN (Linux/macOS)
 kotlinc                  # verifica se está instalado
 ```

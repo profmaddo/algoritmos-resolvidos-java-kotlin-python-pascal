@@ -35,6 +35,116 @@ inicio
 fimalgoritmo
 ```
 
+------
+
+## ☕ Implementação em Java
+
+```java
+import java.util.Scanner;
+
+public class AreaTrianguloValidacao {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double base, altura;
+
+        do {
+            System.out.print("Informe a base do triângulo: ");
+            base = scanner.nextDouble();
+            if (base <= 0) {
+                System.out.println("Valor inválido! A base deve ser maior que zero.");
+            }
+        } while (base <= 0);
+
+        do {
+            System.out.print("Informe a altura do triângulo: ");
+            altura = scanner.nextDouble();
+            if (altura <= 0) {
+                System.out.println("Valor inválido! A altura deve ser maior que zero.");
+            }
+        } while (altura <= 0);
+
+        double area = (base * altura) / 2;
+        System.out.printf("A área do triângulo é: %.2f%n", area);
+    }
+}
+```
+
+---
+
+## 💙 Implementação em Kotlin
+
+```kotlin
+fun main() {
+    var base: Double
+    var altura: Double
+
+    do {
+        print("Informe a base do triângulo: ")
+        base = readLine()!!.toDouble()
+        if (base <= 0) println("Valor inválido! A base deve ser maior que zero.")
+    } while (base <= 0)
+
+    do {
+        print("Informe a altura do triângulo: ")
+        altura = readLine()!!.toDouble()
+        if (altura <= 0) println("Valor inválido! A altura deve ser maior que zero.")
+    } while (altura <= 0)
+
+    val area = (base * altura) / 2
+    println("A área do triângulo é: %.2f".format(area))
+}
+```
+
+---
+
+## 🐍 Implementação em Python
+
+```python
+while True:
+    base = float(input("Informe a base do triângulo: "))
+    if base > 0:
+        break
+    print("Valor inválido! A base deve ser maior que zero.")
+
+while True:
+    altura = float(input("Informe a altura do triângulo: "))
+    if altura > 0:
+        break
+    print("Valor inválido! A altura deve ser maior que zero.")
+
+area = (base * altura) / 2
+print(f"A área do triângulo é: {area:.2f}")
+```
+
+---
+
+## 🧙 Implementação em Pascal
+
+```pascal
+program AreaTrianguloValidacao;
+uses crt;
+var
+  base, altura, area: real;
+begin
+  repeat
+    write('Informe a base do triângulo: ');
+    readln(base);
+    if base <= 0 then
+      writeln('Valor inválido! A base deve ser maior que zero.');
+  until base > 0;
+
+  repeat
+    write('Informe a altura do triângulo: ');
+    readln(altura);
+    if altura <= 0 then
+      writeln('Valor inválido! A altura deve ser maior que zero.');
+  until altura > 0;
+
+  area := (base * altura) / 2;
+  writeln('A área do triângulo é: ', area:0:2);
+end.
+```
+
 ---
 
 ## 🌐 Redes do Professor Marco Maddo

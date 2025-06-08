@@ -37,6 +37,110 @@ fimalgoritmo
 
 ---
 
+## ☕ Implementação em Java
+
+```java
+import java.util.Scanner;
+
+public class InvestimentoMaddoChris {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Informe o salário de Maddo: ");
+        double salarioMaddo = scanner.nextDouble();
+
+        double salarioChris = salarioMaddo / 3;
+        double totalMaddo = salarioMaddo;
+        double totalChris = salarioChris;
+        int meses = 1;
+
+        while (totalChris < totalMaddo) {
+            totalMaddo += totalMaddo * 0.017;
+            totalChris += totalChris * 0.08;
+            meses++;
+        }
+
+        System.out.println("Chris alcançará ou ultrapassará o valor de Maddo em " + meses + " meses.");
+    }
+}
+```
+
+---
+
+## 💙 Implementação em Kotlin
+
+```kotlin
+fun main() {
+    print("Informe o salário de Maddo: ")
+    val salarioMaddo = readLine()!!.toDouble()
+
+    val salarioChris = salarioMaddo / 3
+    var totalMaddo = salarioMaddo
+    var totalChris = salarioChris
+    var meses = 1
+
+    while (totalChris < totalMaddo) {
+        totalMaddo += totalMaddo * 0.017
+        totalChris += totalChris * 0.08
+        meses++
+    }
+
+    println("Chris alcançará ou ultrapassará o valor de Maddo em $meses meses.")
+}
+```
+
+---
+
+## 🐍 Implementação em Python
+
+```python
+salario_maddo = float(input("Informe o salário de Maddo: "))
+
+salario_chris = salario_maddo / 3
+total_maddo = salario_maddo
+total_chris = salario_chris
+meses = 1
+
+while total_chris < total_maddo:
+    total_maddo += total_maddo * 0.017
+    total_chris += total_chris * 0.08
+    meses += 1
+
+print(f"Chris alcançará ou ultrapassará o valor de Maddo em {meses} meses.")
+```
+
+---
+
+## 🧙 Implementação em Pascal
+
+```pascal
+program InvestimentoMaddoChris;
+uses crt;
+var
+  salarioMaddo, salarioChris, totalMaddo, totalChris: real;
+  meses: integer;
+begin
+  write('Informe o salário de Maddo: ');
+  readln(salarioMaddo);
+
+  salarioChris := salarioMaddo / 3;
+  totalMaddo := salarioMaddo;
+  totalChris := salarioChris;
+  meses := 1;
+
+  while totalChris < totalMaddo do
+  begin
+    totalMaddo := totalMaddo + (totalMaddo * 0.017);
+    totalChris := totalChris + (totalChris * 0.08);
+    meses := meses + 1;
+  end;
+
+  writeln('Chris alcançará ou ultrapassará o valor de Maddo em ', meses, ' meses.');
+end.
+```
+
+---
+
 ## 🌐 Redes do Professor Marco Maddo
 
 - YouTube: [Professor Marco Maddo](https://www.youtube.com/@ProfessorMarcoMaddo)

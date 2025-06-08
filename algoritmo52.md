@@ -92,7 +92,266 @@ fimalgoritmo
 
 ---
 
-> 📝 As implementações completas em **Java**, **Kotlin**, **Python** e **Pascal** podem ser encontradas neste markdown!
+## ☕ Implementação em Java
+```java
+import java.util.Scanner;
+
+public class FolhaPagamentoFabrica {
+
+    public static void main(String[] args) {
+        final double SALARIO_MINIMO = 1320.0;
+        int pecas, totalPecas = 0;
+        int totalHomens = 0, totalMulheres = 0;
+        int numOperario = 0, maiorSalarioOperario = 0;
+        char sexo;
+        double salario, folhaPagamento = 0, maiorSalario = 0;
+        double mediaHomens = 0, mediaMulheres = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 1; i <= 15; i++) {
+            System.out.print("Número do operário: ");
+            numOperario = scanner.nextInt();
+            System.out.print("Peças fabricadas: ");
+            pecas = scanner.nextInt();
+            System.out.print("Sexo (M/F): ");
+            sexo = scanner.next().toUpperCase().charAt(0);
+
+            // Cálculo do salário conforme a produtividade
+            if (pecas <= 30) {
+                salario = SALARIO_MINIMO;
+            } else if (pecas <= 50) {
+                salario = SALARIO_MINIMO + (pecas - 30) * (SALARIO_MINIMO * 0.03);
+            } else {
+                salario = SALARIO_MINIMO + (pecas - 30) * (SALARIO_MINIMO * 0.05);
+            }
+
+            System.out.printf("Operário %d - Salário: R$ %.2f%n", numOperario, salario);
+
+            folhaPagamento += salario;
+            totalPecas += pecas;
+
+            if (sexo == 'M') {
+                totalHomens++;
+                mediaHomens += pecas;
+            } else {
+                totalMulheres++;
+                mediaMulheres += pecas;
+            }
+
+            if (salario > maiorSalario) {
+                maiorSalario = salario;
+                maiorSalarioOperario = numOperario;
+            }
+        }
+
+        if (totalHomens > 0) {
+            mediaHomens = mediaHomens / totalHomens;
+        }
+
+        if (totalMulheres > 0) {
+            mediaMulheres = mediaMulheres / totalMulheres;
+        }
+
+        System.out.printf("Folha total: R$ %.2f%n", folhaPagamento);
+        System.out.println("Total de peças: " + totalPecas);
+        System.out.printf("Média peças homens: %.2f%n", mediaHomens);
+        System.out.printf("Média peças mulheres: %.2f%n", mediaMulheres);
+        System.out.println("Operário com maior salário: " + maiorSalarioOperario);
+
+        scanner.close();
+    }
+}
+
+```
+
+**Compilação:**
+```bash
+javac FolhaPagamentoFabrica.java
+java FolhaPagamentoFabrica
+```
+
+---
+
+## 💙 Implementação em Kotlin
+```kotlin
+fun main() {
+    val salarioMinimo = 1320.0
+    var totalPecas = 0
+    var totalHomens = 0
+    var totalMulheres = 0
+    var somaHomens = 0
+    var somaMulheres = 0
+    var folhaPagamento = 0.0
+    var maiorSalario = 0.0
+    var maiorSalarioOperario = 0
+
+    for (i in 1..15) {
+        print("Número do operário: ")
+        val numOperario = readLine()!!.toInt()
+        print("Peças fabricadas: ")
+        val pecas = readLine()!!.toInt()
+        print("Sexo (M/F): ")
+        val sexo = readLine()!!.uppercase()
+
+        val salario = when {
+            pecas <= 30 -> salarioMinimo
+            pecas <= 50 -> salarioMinimo + (pecas - 30) * (salarioMinimo * 0.03)
+            else -> salarioMinimo + (pecas - 30) * (salarioMinimo * 0.05)
+        }
+
+        println("Operário $numOperario - Salário: R$ %.2f".format(salario))
+
+        folhaPagamento += salario
+        totalPecas += pecas
+
+        if (sexo == "M") {
+            totalHomens++
+            somaHomens += pecas
+        } else {
+            totalMulheres++
+            somaMulheres += pecas
+        }
+
+        if (salario > maiorSalario) {
+            maiorSalario = salario
+            maiorSalarioOperario = numOperario
+        }
+    }
+
+    val mediaHomens = if (totalHomens > 0) somaHomens.toDouble() / totalHomens else 0.0
+    val mediaMulheres = if (totalMulheres > 0) somaMulheres.toDouble() / totalMulheres else 0.0
+
+    println("Folha total: R$ %.2f".format(folhaPagamento))
+    println("Total de peças: $totalPecas")
+    println("Média peças homens: %.2f".format(mediaHomens))
+    println("Média peças mulheres: %.2f".format(mediaMulheres))
+    println("Operário com maior salário: $maiorSalarioOperario")
+}
+```
+
+**Compilação:**
+```bash
+kotlinc FolhaPagamentoFabrica.kt -include-runtime -d FolhaPagamentoFabrica.jar
+java -jar FolhaPagamentoFabrica.jar
+```
+
+---
+
+## 🐍 Implementação em Python
+```python
+salario_minimo = 1320.0
+total_pecas = total_homens = total_mulheres = 0
+soma_homens = soma_mulheres = 0
+folha_pagamento = maior_salario = 0.0
+maior_salario_operario = 0
+
+for i in range(15):
+    num_operario = int(input("Número do operário: "))
+    pecas = int(input("Peças fabricadas: "))
+    sexo = input("Sexo (M/F): ").upper()
+
+    if pecas <= 30:
+        salario = salario_minimo
+    elif pecas <= 50:
+        salario = salario_minimo + (pecas - 30) * (salario_minimo * 0.03)
+    else:
+        salario = salario_minimo + (pecas - 30) * (salario_minimo * 0.05)
+
+    print(f"Operário {num_operario} - Salário: R$ {salario:.2f}")
+
+    folha_pagamento += salario
+    total_pecas += pecas
+
+    if sexo == "M":
+        total_homens += 1
+        soma_homens += pecas
+    else:
+        total_mulheres += 1
+        soma_mulheres += pecas
+
+    if salario > maior_salario:
+        maior_salario = salario
+        maior_salario_operario = num_operario
+
+media_homens = soma_homens / total_homens if total_homens else 0
+media_mulheres = soma_mulheres / total_mulheres if total_mulheres else 0
+
+print(f"Folha total: R$ {folha_pagamento:.2f}")
+print(f"Total de peças: {total_pecas}")
+print(f"Média peças homens: {media_homens:.2f}")
+print(f"Média peças mulheres: {media_mulheres:.2f}")
+print(f"Operário com maior salário: {maior_salario_operario}")
+```
+
+---
+
+## 🧙 Implementação em Pascal
+```pascal
+program FolhaPagamentoFabrica;
+uses crt;
+var
+  i, pecas, totalPecas, totalHomens, totalMulheres, numOperario, maiorSalarioOperario: integer;
+  sexo: char;
+  salario, folhaPagamento, maiorSalario, mediaHomens, mediaMulheres: real;
+begin
+  totalPecas := 0;
+  folhaPagamento := 0;
+  totalHomens := 0;
+  totalMulheres := 0;
+  maiorSalario := 0;
+
+  for i := 1 to 15 do
+  begin
+    write('Número do operário: ');
+    readln(numOperario);
+    write('Peças fabricadas: ');
+    readln(pecas);
+    write('Sexo (M/F): ');
+    readln(sexo);
+
+    if pecas <= 30 then
+      salario := 1320
+    else if pecas <= 50 then
+      salario := 1320 + (pecas - 30) * (1320 * 0.03)
+    else
+      salario := 1320 + (pecas - 30) * (1320 * 0.05);
+
+    writeln('Operário ', numOperario, ' - Salário: R$ ', salario:0:2);
+
+    folhaPagamento := folhaPagamento + salario;
+    totalPecas := totalPecas + pecas;
+
+    if (sexo = 'M') or (sexo = 'm') then
+    begin
+      totalHomens := totalHomens + 1;
+      mediaHomens := mediaHomens + pecas;
+    end
+    else
+    begin
+      totalMulheres := totalMulheres + 1;
+      mediaMulheres := mediaMulheres + pecas;
+    end;
+
+    if salario > maiorSalario then
+    begin
+      maiorSalario := salario;
+      maiorSalarioOperario := numOperario;
+    end;
+  end;
+
+  if totalHomens > 0 then
+    mediaHomens := mediaHomens / totalHomens;
+  if totalMulheres > 0 then
+    mediaMulheres := mediaMulheres / totalMulheres;
+
+  writeln('Folha total: R$ ', folhaPagamento:0:2);
+  writeln('Total de peças: ', totalPecas);
+  writeln('Média peças homens: ', mediaHomens:0:2);
+  writeln('Média peças mulheres: ', mediaMulheres:0:2);
+  writeln('Operário com maior salário: ', maiorSalarioOperario);
+end.
+```
 
 ---
 

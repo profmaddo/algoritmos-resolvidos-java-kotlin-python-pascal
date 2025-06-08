@@ -36,6 +36,111 @@ fimalgoritmo
 ```
 
 ---
+## ☕ Implementação em Java
+
+```java
+import java.util.Scanner;
+
+public class AnaliseNumericaSimples {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double numero;
+
+        System.out.println("Digite valores positivos. Digite 0 ou negativo para sair.");
+
+        do {
+            System.out.print("Digite um número: ");
+            numero = scanner.nextDouble();
+
+            if (numero > 0) {
+                System.out.printf("Número: %.2f
+", numero);
+                System.out.printf("Quadrado: %.2f
+", Math.pow(numero, 2));
+                System.out.printf("Cubo: %.2f
+", Math.pow(numero, 3));
+                System.out.printf("Raiz quadrada: %.2f
+", Math.sqrt(numero));
+                System.out.println("--------------");
+            }
+        } while (numero > 0);
+    }
+}
+```
+
+---
+
+## 💙 Implementação em Kotlin
+
+```kotlin
+import kotlin.math.*
+
+fun main() {
+    println("Digite valores positivos. Digite 0 ou negativo para sair.")
+    var numero: Double
+
+    do {
+        print("Digite um número: ")
+        numero = readLine()!!.toDouble()
+
+        if (numero > 0) {
+            println("Número: %.2f".format(numero))
+            println("Quadrado: %.2f".format(numero * numero))
+            println("Cubo: %.2f".format(numero * numero * numero))
+            println("Raiz quadrada: %.2f".format(sqrt(numero)))
+            println("--------------")
+        }
+    } while (numero > 0)
+}
+```
+
+---
+
+## 🐍 Implementação em Python
+
+```python
+import math
+
+print("Digite valores positivos. Digite 0 ou negativo para sair.")
+
+while True:
+    numero = float(input("Digite um número: "))
+    if numero <= 0:
+        break
+    print(f"Número: {numero:.2f}")
+    print(f"Quadrado: {numero ** 2:.2f}")
+    print(f"Cubo: {numero ** 3:.2f}")
+    print(f"Raiz quadrada: {math.sqrt(numero):.2f}")
+    print("--------------")
+```
+
+---
+
+## 🧙 Implementação em Pascal
+
+```pascal
+program AnaliseNumericaSimples;
+uses crt, math;
+var
+  numero: real;
+begin
+  writeln('Digite valores positivos. Digite 0 ou negativo para sair.');
+  repeat
+    write('Digite um número: ');
+    readln(numero);
+    if numero > 0 then
+    begin
+      writeln('Número: ', numero:0:2);
+      writeln('Quadrado: ', sqr(numero):0:2);
+      writeln('Cubo: ', power(numero, 3):0:2);
+      writeln('Raiz quadrada: ', sqrt(numero):0:2);
+      writeln('--------------');
+    end;
+  until numero <= 0;
+end.
+```
+
+---
 
 ## 🌐 Redes do Professor Marco Maddo
 

@@ -70,9 +70,206 @@ inicio
   escreval("Percentual de crianças com até 24 meses de vida: ", perc24:0:2, "%")
 fimalgoritmo
 ```
+---
+## ☕ Implementação em Java
+```java
+import java.util.Scanner;
+
+public class IndiceMortalidadeInfantil {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int total, vida, mortesF = 0, mortesM = 0, ate24 = 0, totalF = 0, totalM = 0;
+
+        System.out.print("Informe o número de crianças nascidas: ");
+        total = scanner.nextInt();
+
+        for (int i = 1; i <= total; i++) {
+            System.out.print("Sexo da criança (M/F): ");
+            String sexo = scanner.next();
+            System.out.print("Tempo de vida em meses: ");
+            vida = scanner.nextInt();
+
+            if (sexo.equalsIgnoreCase("F")) {
+                totalF++;
+                if (vida == 0) mortesF++;
+            } else {
+                totalM++;
+                if (vida == 0) mortesM++;
+            }
+
+            if (vida <= 24) ate24++;
+        }
+
+        double percF = totalF > 0 ? (mortesF * 100.0) / totalF : 0;
+        double percM = totalM > 0 ? (mortesM * 100.0) / totalM : 0;
+        double perc24 = total > 0 ? (ate24 * 100.0) / total : 0;
+
+        System.out.printf("Percentual de mortes femininas: %.2f%%
+", percF);
+        System.out.printf("Percentual de mortes masculinas: %.2f%%
+", percM);
+        System.out.printf("Percentual de crianças com até 24 meses: %.2f%%
+", perc24);
+    }
+}
+```
 
 ---
 
+# 💙 Implementação em Kotlin
+```kotlin
+fun main() {
+    var mortesF = 0
+    var mortesM = 0
+    var ate24 = 0
+    var totalF = 0
+    var totalM = 0
+
+    print("Informe o número de crianças nascidas: ")
+    val total = readLine()?.toIntOrNull() ?: 0
+
+    for (i in 1..total) {
+        print("Sexo da criança (M/F): ")
+        val sexo = readLine()?.uppercase() ?: "M"
+
+        print("Tempo de vida em meses: ")
+        val vida = readLine()?.toIntOrNull() ?: 0
+
+        if (sexo == "F") {
+            totalF++
+            if (vida == 0) mortesF++
+        } else {
+            totalM++
+            if (vida == 0) mortesM++
+        }
+
+        if (vida <= 24) {
+            ate24++
+        }
+    }
+
+    val percF = if (totalF > 0) (mortesF * 100.0) / totalF else 0.0
+    val percM = if (totalM > 0) (mortesM * 100.0) / totalM else 0.0
+    val perc24 = if (total > 0) (ate24 * 100.0) / total else 0.0
+
+    println("Percentual de mortes femininas: %.2f%%".format(percF))
+    println("Percentual de mortes masculinas: %.2f%%".format(percM))
+    println("Percentual de crianças com até 24 meses de vida: %.2f%%".format(perc24))
+}
+```
+---
+
+## 🐍 Implementação em Python
+```python
+# Programa: índice de mortalidade infantil
+
+total = int(input("Informe o número de crianças nascidas: "))
+
+mortesF = 0
+mortesM = 0
+ate24 = 0
+totalF = 0
+totalM = 0
+
+for i in range(1, total + 1):
+    sexo = input("Sexo da criança (M/F): ").strip().upper()
+    vida = int(input("Tempo de vida em meses: "))
+
+    if sexo == 'F':
+        totalF += 1
+        if vida == 0:
+            mortesF += 1
+    else:
+        totalM += 1
+        if vida == 0:
+            mortesM += 1
+
+    if vida <= 24:
+        ate24 += 1
+
+# Cálculo dos percentuais
+percF = (mortesF * 100.0) / totalF if totalF > 0 else 0
+percM = (mortesM * 100.0) / totalM if totalM > 0 else 0
+perc24 = (ate24 * 100.0) / total if total > 0 else 0
+
+# Resultados
+print(f"Percentual de mortes femininas: {percF:.2f}%")
+print(f"Percentual de mortes masculinas: {percM:.2f}%")
+print(f"Percentual de crianças com até 24 meses de vida: {perc24:.2f}%")
+```
+---
+## 🧙 Implementação em Pascal
+```pascal
+program IndiceMortalidadeInfantil;
+
+uses crt;
+
+var
+  i, total, vida, mortesF, mortesM, ate24, totalF, totalM: integer;
+  sexo: char;
+  percF, percM, perc24: real;
+
+begin
+  clrscr;
+  write('Informe o número de crianças nascidas: ');
+  readln(total);
+
+  mortesF := 0;
+  mortesM := 0;
+  ate24 := 0;
+  totalF := 0;
+  totalM := 0;
+
+  for i := 1 to total do
+  begin
+    write('Sexo da criança (M/F): ');
+    readln(sexo);
+    sexo := upcase(sexo);
+    write('Tempo de vida em meses: ');
+    readln(vida);
+
+    if sexo = 'F' then
+    begin
+      totalF := totalF + 1;
+      if vida = 0 then
+        mortesF := mortesF + 1;
+    end
+    else
+    begin
+      totalM := totalM + 1;
+      if vida = 0 then
+        mortesM := mortesM + 1;
+    end;
+
+    if vida <= 24 then
+      ate24 := ate24 + 1;
+  end;
+
+  if totalF > 0 then
+    percF := (mortesF * 100.0) / totalF
+  else
+    percF := 0;
+
+  if totalM > 0 then
+    percM := (mortesM * 100.0) / totalM
+  else
+    percM := 0;
+
+  if total > 0 then
+    perc24 := (ate24 * 100.0) / total
+  else
+    perc24 := 0;
+
+  writeln;
+  writeln('Percentual de mortes femininas: ', percF:0:2, '%');
+  writeln('Percentual de mortes masculinas: ', percM:0:2, '%');
+  writeln('Percentual de criancas com até 24 meses de vida: ', perc24:0:2, '%');
+
+  readln;
+end.
+
+```
+---
 ## 🌐 Redes do Professor Marco Maddo
 
 - YouTube: [Professor Marco Maddo](https://www.youtube.com/@ProfessorMarcoMaddo)

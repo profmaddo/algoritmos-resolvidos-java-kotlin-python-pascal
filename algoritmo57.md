@@ -41,6 +41,127 @@ fimalgoritmo
 
 ---
 
+## ☕ Implementação em Java
+
+```java
+import java.util.Scanner;
+
+public class SomaIntervalo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int m, n;
+
+        System.out.println("Digite pares de valores inteiros positivos (m < n).");
+        System.out.println("Para encerrar, digite um par onde m >= n.");
+        System.out.println("-------------------------------------------");
+
+        do {
+            System.out.print("Digite o valor de m: ");
+            m = scanner.nextInt();
+            System.out.print("Digite o valor de n: ");
+            n = scanner.nextInt();
+
+            if (m < n) {
+                int soma = 0;
+                for (int i = m; i <= n; i++) {
+                    soma += i;
+                }
+                System.out.printf("A soma dos inteiros entre %d e %d é: %d%n", m, n, soma);
+                System.out.println("-------------------------------------------");
+            }
+        } while (m < n);
+
+        System.out.println("Programa encerrado.");
+    }
+}
+```
+
+---
+
+## 💙 Implementação em Kotlin
+
+```kotlin
+fun main() {
+    println("Digite pares de valores inteiros positivos (m < n).")
+    println("Para encerrar, digite um par onde m >= n.")
+    println("-------------------------------------------")
+
+    while (true) {
+        print("Digite o valor de m: ")
+        val m = readLine()!!.toInt()
+        print("Digite o valor de n: ")
+        val n = readLine()!!.toInt()
+
+        if (m >= n) break
+
+        val soma = (m..n).sum()
+        println("A soma dos inteiros entre $m e $n é: $soma")
+        println("-------------------------------------------")
+    }
+
+    println("Programa encerrado.")
+}
+```
+
+---
+
+## 🐍 Implementação em Python
+
+```python
+print("Digite pares de valores inteiros positivos (m < n).")
+print("Para encerrar, digite um par onde m >= n.")
+print("-------------------------------------------")
+
+while True:
+    m = int(input("Digite o valor de m: "))
+    n = int(input("Digite o valor de n: "))
+
+    if m >= n:
+        break
+
+    soma = sum(range(m, n + 1))
+    print(f"A soma dos inteiros entre {m} e {n} é: {soma}")
+    print("-------------------------------------------")
+
+print("Programa encerrado.")
+```
+
+---
+
+## 🧙 Implementação em Pascal
+
+```pascal
+program SomaIntervalo;
+uses crt;
+var
+  m, n, i, soma: integer;
+begin
+  writeln('Digite pares de valores inteiros positivos (m < n).');
+  writeln('Para encerrar, digite um par onde m >= n.');
+  writeln('-------------------------------------------');
+
+  repeat
+    write('Digite o valor de m: ');
+    readln(m);
+    write('Digite o valor de n: ');
+    readln(n);
+
+    if m < n then
+    begin
+      soma := 0;
+      for i := m to n do
+        soma := soma + i;
+      writeln('A soma dos inteiros entre ', m, ' e ', n, ' é: ', soma);
+      writeln('-------------------------------------------');
+    end;
+  until m >= n;
+
+  writeln('Programa encerrado.');
+end.
+```
+
+---
+
 ## 🌐 Redes do Professor Marco Maddo
 
 - YouTube: [Professor Marco Maddo](https://www.youtube.com/@ProfessorMarcoMaddo)
