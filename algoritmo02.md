@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Média de Três Notas
 
 Neste segundo exercício, vamos desenvolver algoritmos e programas que recebem **três notas** e retornam a **média aritmética**. Veja abaixo três formas diferentes de apresentar o mesmo problema:

@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Salário com Gratificação e Imposto
 
 Neste sexto exercício, o programa deve receber o **salário base de um funcionário**, calcular a **gratificação de 5%** e o **desconto de imposto de 7%**, ambos sobre o salário base, e então mostrar o **salário a receber**.

@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Aumento Salarial de 25%
 
 Neste quarto exercício, o objetivo é criar um algoritmo que receba o salário de um funcionário e calcule o novo salário após um aumento de 25%. Abaixo, apresentamos três formas diferentes de contextualizar o problema:

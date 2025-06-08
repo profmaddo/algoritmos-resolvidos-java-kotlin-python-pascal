@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Cálculo de Idade Atual e Idade em 2050
 
 Neste décimo quarto exercício, o programa deve receber o **ano de nascimento de uma pessoa** e o **ano atual**, e então:

@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Aumento Salarial com Percentual Variável
 
 Neste quinto exercício, vamos criar um algoritmo que receba o **salário de um funcionário** e o **percentual de aumento**. O programa deve calcular o valor do aumento e o novo salário. Abaixo estão três versões da situação problema com diferentes abordagens didáticas:

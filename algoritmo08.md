@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Cálculo da Área de um Triângulo
 
 Neste oitavo exercício, o objetivo é criar um programa que **receba a base e a altura de um triângulo** e calcule a **área**, usando a fórmula:  

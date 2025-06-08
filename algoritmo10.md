@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Cálculo da Área de um Círculo
 
 Neste décimo exercício, vamos criar um programa que **receba o valor do raio (R)** de um círculo e calcule a **área** utilizando a fórmula:  

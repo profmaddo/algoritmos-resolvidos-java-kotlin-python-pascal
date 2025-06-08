@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Cálculo de Rendimento de um Depósito
 
 Neste nono exercício, vamos desenvolver um programa que **receba o valor de um depósito bancário** e a **taxa de juros (% ao mês)**, e calcule o **valor do rendimento** e o **valor total após o rendimento**.

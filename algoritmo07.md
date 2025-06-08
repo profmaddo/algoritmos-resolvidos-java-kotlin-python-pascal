@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Salário com Gratificação Fixa e Imposto Percentual
 
 Neste sétimo exercício, o programa deve receber o **salário base de um funcionário**, adicionar uma **gratificação fixa de R$ 50,00** e descontar **10% de imposto** sobre o salário base. O objetivo é calcular e exibir o **salário final a receber**.

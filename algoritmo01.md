@@ -1,5 +1,8 @@
 # Aprenda algoritmos com o Professor Marco Maddo
 
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
+
+
 ## 🧠 Situação Problema: Soma de Quatro Números Inteiros
 
 Neste primeiro exercício, vamos desenvolver algoritmos e programas simples que recebem **quatro números inteiros** e retornam a **soma entre eles**. Veja abaixo três formas diferentes de apresentar o mesmo problema:

@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Média Ponderada
 
 Neste terceiro exercício, o desafio é receber **três notas** e seus respectivos **pesos**, calcular e exibir a **média ponderada**. Veja abaixo três formas diferentes de apresentar o mesmo problema para engajar os estudantes:
