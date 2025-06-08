@@ -1,6 +1,6 @@
 # Aprenda algoritmos com o Professor Marco Maddo
 ## FUNDAMENTOS DE PROGRAMAÇÃO EM PYTHON
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 A seguir, os principais conceitos de **Python** usados nas implementações dos algoritmos.
 
 ### 📌 Fundamentos Utilizados

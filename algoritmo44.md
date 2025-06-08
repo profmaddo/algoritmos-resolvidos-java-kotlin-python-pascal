@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Cálculo de salário com aumento progressivo
 
 Neste quadragésimo quarto exercício, você irá criar um programa para calcular o salário atual de um funcionário que foi contratado em 2010 com R$ 3.000,00 e passou a receber aumentos anuais, conforme:

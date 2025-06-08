@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 🎲 **Algoritmo 71 - Frequência dos Números Sorteados em 20 Jogadas de Dado**
 
 ## Situação Problema Reformulada

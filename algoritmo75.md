@@ -1,5 +1,5 @@
 # Algoritmo 75 – Multiplicação da Matriz pelo Maior Elemento
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## Versão 1 - Reformulação da Situação Problema
 Crie um programa que leia os valores de uma matriz 2x2 e multiplique cada um desses valores pelo maior número presente na matriz, gerando uma nova matriz resultante.
 

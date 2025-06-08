@@ -1,6 +1,6 @@
 # Aprenda algoritmos com o Professor Marco Maddo
 ## algoritmo70.md
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ### Versão 1 - Linguagem clara e direta
 Faça um programa que leia seis números inteiros. Em seguida, mostre apenas os números pares, calcule e mostre a soma dos pares. Depois, exiba os números ímpares e quantos deles foram digitados.
 ### Versão 2 - Estilo desafio

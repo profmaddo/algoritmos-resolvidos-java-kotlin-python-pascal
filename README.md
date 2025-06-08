@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 Seja bem-vindo ao repositório **"Algoritmos Resolvidos"** com implementações nas linguagens **Java**, **Kotlin**, **Python** e **Pascal**, baseados em algoritmos escritos inicialmente em **Portugol**. Este repositório é um guia prático para estudantes que desejam aprender lógica de programação e desenvolver habilidades em linguagens de programação modernas e clássicas.
 
 ## 🚀 O que você vai aprender

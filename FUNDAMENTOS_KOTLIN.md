@@ -1,6 +1,6 @@
 # Aprenda algoritmos com o Professor Marco Maddo
 ## FUNDAMENTOS DE PROGRAMAÇÃO EM KOTLIN
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 Este documento apresenta os fundamentos da linguagem **Kotlin** explorados nas soluções dos algoritmos.
 
 ### 📌 Fundamentos Utilizados

@@ -1,5 +1,5 @@
 # EMENTA DOS ALGORITMOS ESTUDADOS
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 Esta ementa relaciona os conceitos de programação abordados em cada exercício desenvolvido no projeto **Aprenda Algoritmos com o Professor Marco Maddo**.
 
 | Algoritmo | Conceitos abordados |

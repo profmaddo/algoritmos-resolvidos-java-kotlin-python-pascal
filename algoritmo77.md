@@ -1,6 +1,6 @@
 
 # Algoritmo 77 — Lojas, Produtos e Preços
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 💡 Situação-problema Reformulada (Versão 1)
 Você trabalha como analista de preços em uma rede de lojas e precisa identificar quais produtos estão sendo vendidos por até R$ 300,00 em diferentes lojas. Para isso, será necessário coletar os nomes de oito lojas, quatro produtos e seus respectivos preços em uma matriz. Ao final, o sistema deverá exibir apenas as combinações de produto e loja cujo valor não ultrapasse R$ 300,00.
 

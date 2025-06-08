@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Tabela de fatoriais com base em múltiplos números
 
 Neste quadragésimo sexto exercício, você criará um programa que:

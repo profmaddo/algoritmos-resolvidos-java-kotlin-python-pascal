@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 🎓 Bem-vindo(a) ao nosso projeto de estudos de **Algoritmos e Programação Multilíngue**!
 
 Neste documento, você encontrará o passo a passo para instalar todas as ferramentas necessárias para compilar, testar e executar os algoritmos desenvolvidos em **Portugol**, **Java**, **Kotlin**, **Python** e **Pascal**, além de configurar o **Git** para versionamento dos seus projetos. O conteúdo contempla os sistemas **Linux**, **macOS** e **Windows**. 🧠💻

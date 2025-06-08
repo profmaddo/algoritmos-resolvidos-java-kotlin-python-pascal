@@ -1,5 +1,5 @@
 # Aprenda algoritmos com o Professor Marco Maddo
-
+![Mestre dos Algoritmos](https://raw.githubusercontent.com/profmaddo/algoritmos-resolvidos-java-kotlin-python-pascal/main/images/mestre-dos-algoritmos-02.jpeg)
 ## 🧠 Situação Problema: Estatísticas de Acidentes de Trânsito em Cidades
 
 Neste quadragésimo sétimo exercício, foi realizada uma pesquisa em **cinco cidades brasileiras** para levantar estatísticas sobre **acidentes de trânsito**. Para cada cidade, foram coletados os seguintes dados:
